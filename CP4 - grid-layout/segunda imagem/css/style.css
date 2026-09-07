@@ -1,3 +1,7 @@
+:root {
+    --off-white: #fff3ef
+}
+
 .img {
     width: 100%;
     height: 100%;
@@ -6,12 +10,12 @@
 
 
 .praia {
-    background-color: #fff3ef;
+    background-color: var(--off-white);
     padding: 100px 15px;
     display: grid;
     gap: 15px;
     grid-template-rows: repeat(2, 300px);
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
 .praia-1 {
@@ -28,7 +32,13 @@
 
 .praia .img {
     border-radius: 7px;
+    transition: transform 0.3s ease;
 }
+
+.praia .img:hover {
+    transform: scale(1.03);
+}
+
 
 @media (max-width: 600px) {
     .praia {
@@ -53,20 +63,11 @@
         grid-row: 1/3;
     }
 
-    .praia-4 {
-        grid-column: 2;
-        grid-row: 3;
-    }
- 
-    .praia-5 {
-        grid-column: 2;
-        grid-row: 4;
-    }
- 
-    .praia-6 {
-        grid-column: 1;
-        grid-row: 3/5;
-    }
-
+    
 }
  
+@media (max-width: 1024px) {
+    .praia{
+        padding: 70px 30px;
+    }
+}
